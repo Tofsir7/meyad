@@ -3,14 +3,19 @@ const getProducts = (req, res) => {
     res.send("Give me the lis of the products available on my shop")
 }
 
-const addProducts = (req, res) => {
+const addProduct = (req, res) => {
     res.status(200);
     res.send("Add the products to the shop")
 }
 
-const deleteProducts = (req, res) => {
+const deleteProduct = (req, res) => {
     res.status(200);
     res.send("Delete this product from my shop");
 }
 
-module.exports = { getProducts, addProducts, deleteProducts };
+const expiredProducts = (req, res) => {
+    res.status(200);
+    res.send("All the products have been expired");
+}
+
+module.exports = { getProducts, addProduct, deleteProduct, expiredProducts };
