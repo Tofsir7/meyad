@@ -1,21 +1,10 @@
-const getProducts = (req, res) => {
-    res.status(200);
-    res.send("Give me the lis of the products available on my shop")
-}
+const express = require('express');
+const router = express.Router();
+const { getProducts, addProduct, deleteProduct, expiredProducts } = require('../controllers/productController');
 
-const addProduct = (req, res) => {
-    res.status(200);
-    res.send("Add the products to the shop")
-}
+router.get('/all', getProducts);
+router.post('/add', addProduct);
+router.delete('/delete', deleteProduct);
+router.get('/expired', expiredProducts);
 
-const deleteProduct = (req, res) => {
-    res.status(200);
-    res.send("Delete this product from my shop");
-}
-
-const expiredProducts = (req, res) => {
-    res.status(200);
-    res.send("All the products have been expired");
-}
-
-module.exports = { getProducts, addProduct, deleteProduct, expiredProducts };
+module.exports = router;
