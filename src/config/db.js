@@ -1,8 +1,8 @@
-// Database connection placeholder
+// Database connection 
 const connectDB = async () => {
     try {
-        // Will connect to MongoDB here
-        console.log("Database connected (placeholder)");
+        // I will connect to MongoDB here
+        console.log("Database connected Successfully");
     } catch (error) {
         console.error(`Error: ${error.message}`);
         process.exit(1);

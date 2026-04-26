@@ -1,5 +1,5 @@
 const protect = (req, res, next) => {
-    // In future, check JWT here
+    // In future, I will check JWT here
     console.log("Auth middleware hit");
     next();
 };
