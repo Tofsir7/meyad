@@ -4,7 +4,7 @@ const { getProducts, addProduct, deleteProduct, expiredProducts } = require('../
 
 router.get('/all', getProducts);
 router.post('/add', addProduct);
-router.delete('/delete', deleteProduct);
+router.delete('/delete/:id', deleteProduct);
 router.get('/expired', expiredProducts);
 
 module.exports = router;
