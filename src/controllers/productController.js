@@ -29,7 +29,7 @@ const deleteProduct = async(req, res) => {
 }
 const expiredProducts = async(req, res) => {
     const expired = await Product.find({ expiryDate: { $lt: new Date() } });
-    if(!expired){
+    if(expired.length === 0){
         return res.status(404).json({ message: "No expired products found" });
     }   
     res.status(200).json(expired);
