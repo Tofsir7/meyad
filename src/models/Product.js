@@ -11,6 +11,10 @@ const productSchema = new mongoose.Schema(
         type: String,
         required: true
     },
+    note:{
+        type: String,
+        required: false
+    },
     expiryDate:{
         type: Date,
         required: true
